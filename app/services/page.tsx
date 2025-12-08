@@ -37,7 +37,7 @@ export default function ServicesPage() {
           ]}
         />
       </div>
-      <p className="text-xs text-slate-400 mt-4">
+      <p className="text-sm text-brandYellow font-bold mt-6">
         To discuss a project, use the contact page or reach out via Instagram /
         email with your idea, budget and timeline.
       </p>
