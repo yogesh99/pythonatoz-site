@@ -38,7 +38,7 @@ export default function ServicesPage() {
         />
       </div>
       <p className="text-xs text-slate-400 mt-4">
-        To discuss a project, use the contact form or reach out via Instagram /
+        To discuss a project, use the contact page or reach out via Instagram /
         email with your idea, budget and timeline.
       </p>
     </div>
