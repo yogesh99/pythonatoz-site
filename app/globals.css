@@ -1,4 +1,8 @@
 @import "tailwindcss";
+@import "@fontsource/plus-jakarta-sans/400.css";
+@import "@fontsource/plus-jakarta-sans/500.css";
+@import "@fontsource/plus-jakarta-sans/600.css";
+@import "@fontsource/plus-jakarta-sans/700.css";
 
 :root {
   --background: #ffffff;
@@ -14,13 +18,47 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0f172a;
+    --foreground: #f8fafc;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+@layer base {
+  html,
+  body {
+    @apply bg-slate-950 text-white antialiased font-[Plus_Jakarta_Sans];
+  }
+}
+
+.btn-brand-outline {
+  color: #f7d433;
+}
+
+.glow-yellow {
+  text-shadow: 0 0 10px rgba(247, 212, 51, 0.6),
+    0 0 20px rgba(247, 212, 51, 0.4);
+}
+@layer utilities {
+  .bg-brandDark {
+    background-color: #08355a !important;
+  }
+  .bg-brandYellow {
+    background-color: #f7d433 !important;
+  }
+  .text-brandYellow {
+    color: #f7d433 !important;
+  }
+  .text-brandBlue {
+    color: #366995 !important;
+  }
+  .border-brandBlue {
+    border-color: #366995 !important;
+  }
+  .border-brandYellow {
+    border-color: #f7d433 !important;
+  }
 }
