@@ -18,26 +18,37 @@ export default function BlogPage() {
           <Link
             key={post.id}
             href={`/blog/${post.slug}`}
-            className="group bg-[#092F4A] p-6 rounded-xl border border-white/10 
-                       hover:border-brandYellow/60 hover:shadow-[0_0_18px_rgba(247,212,51,0.3)] 
-                       transition-all duration-300 text-white"
+            className="group bg-[#092F4A] p-0 rounded-xl border border-white/10 
+             hover:border-brandYellow/60 hover:shadow-[0_0_18px_rgba(247,212,51,0.3)] 
+             transition-all duration-300 overflow-hidden"
           >
-            <h2 className="text-lg font-semibold group-hover:text-brandYellow leading-tight">
-              {post.title}
-            </h2>
+            {/* Blog Thumbnail */}
+            <div className="w-full h-44 overflow-hidden">
+              <img
+                src={post.image}
+                alt={post.title}
+                width={800}
+                height={400}
+                className="w-full rounded-t-xl object-contain bg-slate-800"
+              />
+            </div>
 
-            <p className="text-xs opacity-70 mt-1">
-              {post.date} · {post.readTime}
-            </p>
+            <div className="p-5 text-white">
+              <h2 className="text-lg font-semibold group-hover:text-brandYellow">
+                {post.title}
+              </h2>
+              <p className="text-xs opacity-70 mt-1">
+                {post.date} · {post.readTime}
+              </p>
+              <p className="mt-3 text-sm text-slate-300">{post.excerpt}</p>
 
-            <p className="mt-3 text-sm text-slate-300">{post.excerpt}</p>
-
-            <span
-              className="inline-block mt-4 font-medium text-brandYellow 
-                             group-hover:translate-x-1 transition"
-            >
-              Read More →
-            </span>
+              <span
+                className="inline-block mt-4 font-medium text-brandYellow 
+                    group-hover:translate-x-1 transition"
+              >
+                Read More →
+              </span>
+            </div>
           </Link>
         ))}
       </div>
