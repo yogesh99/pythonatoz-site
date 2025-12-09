@@ -48,6 +48,10 @@ export default function RootLayout({
             __html: JSON.stringify(require("./schema/organization.json")),
           }}
         />
+        <meta
+          name="google-adsense-account"
+          content="ca-pub-8350516671251249"
+        ></meta>
       </head>
       <body
         suppressHydrationWarning
