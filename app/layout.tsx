@@ -16,7 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-brandDark text-white antialiased font-[Plus_Jakarta_Sans]">
+      <body
+        suppressHydrationWarning
+        className="bg-brandDark text-white antialiased font-[Plus_Jakarta_Sans]"
+      >
         <div className="min-h-screen flex flex-col">
           <Navbar />
           <main className="flex-1 max-w-6xl w-full mx-auto px-4 md:px-6 py-10">
