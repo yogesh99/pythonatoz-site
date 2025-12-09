@@ -1,7 +1,7 @@
 "use client";
 
 import { ProjectCard } from "@/components/ProjectCard";
-import { ServiceCard } from "@/components/ServiceCard";
+import ServiceCard from "@/components/ServiceCard";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -129,7 +129,7 @@ export default function Home() {
         </div>
         <div className="grid md:grid-cols-3 gap-5">
           {projects.map((p) => (
-            <ProjectCard key={p.title} {...p} />
+            <ProjectCard link={""} key={p.title} {...p} />
           ))}
         </div>
       </section>

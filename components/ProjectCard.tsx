@@ -1,29 +1,40 @@
 "use client";
-
-import { motion } from "framer-motion";
+import Link from "next/link";
 
 interface ProjectCardProps {
   title: string;
   description: string;
   tag: string;
+  link: string;
 }
 
-export const ProjectCard = ({ title, description, tag }: ProjectCardProps) => {
+export function ProjectCard({
+  title,
+  description,
+  tag,
+  link,
+}: ProjectCardProps) {
   return (
-    <motion.div
-      whileHover={{ y: -6, scale: 1.01 }}
-      className="group rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-5 shadow-[0_18px_45px_rgba(15,23,42,0.75)]"
-    >
-      <div className="flex items-center justify-between mb-3">
-        <h3 className="font-semibold text-lg text-slate-50">{title}</h3>
-        <span className="text-[11px] px-2 py-1 rounded-full bg-brandYellow-500/10 text-brandYellow border border-brandYellow">
+    <div className="p-6 bg-[#09243d]/70 border border-white/10 rounded-xl shadow-lg hover:shadow-xl hover:border-brandYellow/60 transition-all">
+      <div className="flex justify-between items-start">
+        <h3 className="text-white font-semibold text-lg leading-snug">
+          {title}
+        </h3>
+
+        <span className="px-3 py-1 text-[11px] rounded-full border border-yellow-400/70 text-yellow-300">
           {tag}
         </span>
       </div>
-      <p className="text-sm text-slate-300/90 mb-3">{description}</p>
-      <button className="text-xs font-medium text-brandYellow group-hover:text-brandYellow-200">
-        View details →
-      </button>
-    </motion.div>
+
+      <p className="text-slate-300 text-sm mt-2 leading-relaxed">
+        {description}
+      </p>
+
+      <Link href={link}>
+        <span className="text-brandYellow text-sm mt-4 inline-block hover:underline underline-offset-4">
+          View details →
+        </span>
+      </Link>
+    </div>
   );
-};
+}
