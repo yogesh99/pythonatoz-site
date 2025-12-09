@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-
+import Analytics from "@/app/providers/Analytics";
 export const metadata: Metadata = {
   title: "PythonAtoZ - Automation, AI Tools, Python Apps & Projects",
   description:
@@ -41,10 +41,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(require("./schema/organization.json")),
+          }}
+        />
+      </head>
       <body
         suppressHydrationWarning
         className="bg-brandDark text-white antialiased font-[Plus_Jakarta_Sans]"
       >
+        <Analytics />
         <div className="min-h-screen flex flex-col">
           <Navbar />
           <main className="flex-1 max-w-6xl w-full mx-auto px-4 md:px-6 py-10">

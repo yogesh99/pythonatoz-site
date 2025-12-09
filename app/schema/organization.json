@@ -1,0 +1,11 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PythonAtoZ",
+  "url": "https://www.pythonatoz.in",
+  "logo": "https://www.pythonatoz.in/og-banner.png",
+  "sameAs": [
+    "https://www.instagram.com/python.atoz/",
+    "https://www.youtube.com/@pythonAtoZ"
+  ]
+}
