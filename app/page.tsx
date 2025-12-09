@@ -134,49 +134,35 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services preview */}
-      <section className="space-y-5">
-        <div className="flex items-center justify-between gap-3">
-          <h2 className="text-xl font-semibold text-slate-50">
-            How I can help you with Python
-          </h2>
-          <Link
-            href="/services"
-            className="text-sm text-emerald-300 hover:text-emerald-200"
-          >
-            View all services →
-          </Link>
-        </div>
-        <div className="grid md:grid-cols-3 gap-5">
+      {/* Services Section */}
+      <section className="mt-20 space-y-5">
+        <h2 className="text-2xl font-semibold text-white">Services</h2>
+        <p className="text-slate-300 max-w-2xl">
+          I help businesses and creators build automation scripts, Python tools,
+          and AI-driven applications. Clean, fast and production-ready
+          development.
+        </p>
+
+        <div className="grid md:grid-cols-3 gap-6">
           <ServiceCard
-            name="Quick Script Fix"
-            description="Small Python tasks, debugging, minor automation, or adding features to an existing script."
-            priceNote="Perfect for students & small tweaks. Pricing depends on scope."
-            highlights={[
-              "Bug fixes & improvements",
-              "Help with existing scripts",
-              "Short turnaround",
-            ]}
+            title="Business Automation Scripts"
+            description="Automate repetitive tasks, scraping, email workflows, data processing & more."
+            tag="Automation"
+            link="/services"
           />
+
           <ServiceCard
-            name="Business Automation"
-            description="End-to-end automation scripts that save hours of manual work for your business or workflow."
-            priceNote="Best for founders & teams wanting to reduce repetitive work."
-            highlights={[
-              "Email/report automation",
-              "Data processing pipelines",
-              "Custom tools tailored to your workflow",
-            ]}
+            title="Python Tools & Apps"
+            description="We build custom Python-based tools like URL shorteners, PDF apps, scrapers, dashboards."
+            tag="Tools"
+            link="/services"
           />
+
           <ServiceCard
-            name="Full Project Build"
-            description="Portfolio-ready or client-ready Python projects with documentation and guidance."
-            priceNote="Great for long-term systems and high-impact tools."
-            highlights={[
-              "From idea to deployment",
-              "Clean, structured codebase",
-              "Support during integration",
-            ]}
+            title="AI + ChatGPT Solutions"
+            description="AI-powered assistants, content generation tools, chatbot integrations & automation."
+            tag="AI"
+            link="/services"
           />
         </div>
       </section>
