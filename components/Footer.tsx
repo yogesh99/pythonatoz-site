@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export const Footer = () => {
   const socials = [
-    { name: "Instagram", url: "https://instagram.com/python.atoz" },
-    { name: "YouTube", url: "https://www.youtube.com/@pythonAtoZ" },
+    { name: "Instagram", url: "https://www.instagram.com/pythonatoz.in/" },
+    { name: "YouTube", url: "https://www.youtube.com/@pythonatoz" },
     { name: "GitHub", url: "https://github.com/yogesh99/" },
   ];
   return (
