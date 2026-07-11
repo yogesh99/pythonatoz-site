@@ -15,7 +15,7 @@ export default function Contact() {
       </p>
 
       {/* Cards */}
-      <div className="grid md:grid-cols-3 gap-6 text-left">
+      <div className="grid md:grid-cols-2 gap-6 text-left max-w-2xl mx-auto">
         {/* Email */}
         <Link
           href="mailto:pythonatoz.team@gmail.com"
@@ -29,24 +29,12 @@ export default function Contact() {
 
         {/* Call */}
         <Link
-          href="tel:+919930106939"
+          href="tel:+919082252180"
           className="group p-6 rounded-xl bg-[#0e3f61]/40 border border-white/10 hover:border-brandYellow hover:shadow-xl transition cursor-pointer block"
         >
           <h3 className="font-semibold text-lg text-white">Call</h3>
           <p className="text-sm text-slate-400 mt-2 group-hover:text-brandYellow transition">
             Tap to call →
-          </p>
-        </Link>
-
-        {/* WhatsApp */}
-        <Link
-          href="https://wa.me/919930106939?text=Hi%20I%20want%20to%20discuss%20a%20Python%20project"
-          target="_blank"
-          className="group p-6 rounded-xl bg-[#0e3f61]/40 border border-white/10 hover:border-brandYellow hover:shadow-xl transition cursor-pointer block"
-        >
-          <h3 className="font-semibold text-lg text-white">WhatsApp</h3>
-          <p className="text-sm text-slate-400 mt-2 group-hover:text-brandYellow transition">
-            Tap to chat →
           </p>
         </Link>
       </div>
